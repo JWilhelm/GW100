@@ -12,9 +12,7 @@ absreffile=$inpdir'/'$reffile
 cd $calcdir
 length=${#xyzdir}
 
-echo ' #  Name   HOMO      ref HOMO  LUMO      ref LUMO  chiomegatau' > $absresultfile
-
-echo '# av. dev. HOMO/LUMO'
+echo ' #  Name   HOMO      ref HOMO  LUMO      ref LUMO  chiomegatau   runavg. error HOMO/LUMO' > $absresultfile
 
 homodiffsum='0.0'
 lumodiffsum='0.0'
@@ -49,9 +47,8 @@ do
   lumodiffsum=$(echo "$lumodiffsum+($lumo_ref-($lumo))*($lumo < $lumo_ref)"| bc -l)
 
   n_molecules=$(echo "$n_molecules+1"| bc -l)
-
-  echo $n_molecules $(printf '%.*f\n' 3 $(echo "$homodiffsum / $n_molecules"| bc -l)) \
-                    $(printf '%.*f\n' 3 $(echo "$lumodiffsum / $n_molecules"| bc -l))
+  runavgerror_homo=$(printf '%.*f\n' 3 $(echo "$homodiffsum / $n_molecules"| bc -l))
+  runavgerror_lumo=$(printf '%.*f\n' 3 $(echo "$lumodiffsum / $n_molecules"| bc -l))
 
   dirname=$dirname"______________________"
   dirname=${dirname:0:10}
@@ -63,10 +60,15 @@ do
   lumo=${lumo:0:10}
   lumo_ref=$lumo_ref"______________________"
   lumo_ref=${lumo_ref:0:10}
-  chiomegatau=$chiomegatau"______________________"
-  chiomegatau=${chiomegatau:0:10}
+  chiomegatau=$chiomegatau"___________________________"
+  chiomegatau=${chiomegatau:0:14}
+  runavgerror_homo=$runavgerror_homo"____________________________"
+  runavgerror_homo=${runavgerror_homo:0:10}
+  runavgerror_lumo=$runavgerror_lumo"____________________________"
+  runavgerror_lumo=${runavgerror_lumo:0:10}
 
-  echo " "$dirname""$homo""$homo_ref""$lumo""$lumo_ref""$chiomegatau >> $absresultfile
+  echo " "$dirname$homo$homo_ref$lumo$lumo_ref$chiomegatau$runavgerror_homo$runavgerror_lumo \
+        >> $absresultfile
 
   sed -i 's/_/ /g' $absresultfile
 
