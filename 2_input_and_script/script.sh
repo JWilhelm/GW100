@@ -22,13 +22,20 @@ for xyzfile in $xyzdir*
 do
   xyzname=${xyzfile:$length}
   dirname=${xyzname::-4}
-  mkdir $dirname
+  if [ ! -d "$calcdir/$dirname" ]; then
+    mkdir $dirname
+  fi
   cd $dirname
   cp $inpdir'/'$GWfile .
   sed -i -e 's/<geo>/'$xyzname'/g' $GWfile
   cp $xyzfile .
-  mpirun -np 4 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
-  $GWfile &> $outfile
+  if grep -q "PROGRAM STOPPED IN" "$outfile"; then
+    echo $dirname' already done'
+  else
+    echo $dirname' running'
+    mpirun -np 4 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+    $GWfile &> $outfile
+  fi
 
   chiomegatau=$(grep -m 1 "Maximum deviation of the imag. time fit:" $outfile | awk '{ print $9 }')
   homo=$(grep "( occ )" $outfile | tail -1 | awk '{ print $10 }')
