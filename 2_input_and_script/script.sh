@@ -12,7 +12,7 @@ absreffile=$inpdir'/'$reffile
 cd $calcdir
 length=${#xyzdir}
 
-echo ' #  Name   HOMO      ref HOMO  LUMO      ref LUMO  chiomegatau   runavg. error HOMO/LUMO' > $absresultfile
+echo ' #  Name   HOMO      ref HOMO  LUMO      ref LUMO  chiomegatau   fit-points  Pade-param   runavg. error HOMO/LUMO' > $absresultfile
 
 homodiffsum='0.0'
 lumodiffsum='0.0'
@@ -35,16 +35,19 @@ do
       echo $dirname' already done'
     else
       echo $dirname' running'
-      mpirun -np 24 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+      mpirun -np 18 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
       $GWfile &> $outfile
     fi
   else
     echo $dirname' running'
-    mpirun -np 24 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+    mpirun -np 18 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
     $GWfile &> $outfile
   fi
 
   chiomegatau=$(grep -m 1 "Maximum deviation of the imag. time fit:" $outfile | awk '{ print $9 }')
+  numfitpoints=$(grep -m 1 "Number of fit points for analytic continuation:" $outfile | awk '{ print $8 }')
+  numpadeparam=$(grep -m 1 "Number of pade parameters:" $outfile | awk '{ print $5 }')
+
   homo=$(grep "( occ )" $outfile | tail -1 | awk '{ print $10 }')
   lumo=$(grep "( vir )" $outfile | head -1 | awk '{ print $10 }')
 
@@ -76,13 +79,17 @@ do
   lumo_ref=${lumo_ref:0:10}
   chiomegatau=$chiomegatau"___________________________"
   chiomegatau=${chiomegatau:0:14}
+  numfitpoints=$numfitpoints"______________________"
+  numfitpoints=${numfitpoints:0:8}
+  numpadeparam=$numpadeparam"______________________"
+  numpadeparam=${numpadeparam:0:8}
   runavgerror_homo=$runavgerror_homo"____________________________"
   runavgerror_homo=${runavgerror_homo:0:10}
   runavgerror_lumo=$runavgerror_lumo"____________________________"
   runavgerror_lumo=${runavgerror_lumo:0:10}
 
-  echo " "$dirname$homo$homo_ref$lumo$lumo_ref$chiomegatau$runavgerror_homo$runavgerror_lumo \
-        >> $absresultfile
+  echo " "$dirname $homo $homo_ref $lumo $lumo_ref $chiomegatau $numfitpoints $numpadeparam \
+          $runavgerror_homo$runavgerror_lumo >> $absresultfile
 
   sed -i 's/_/ /g' $absresultfile
 

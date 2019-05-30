@@ -45,7 +45,7 @@
           &HF
             FRACTION 1.0000000
             &SCREENING
-              EPS_SCHWARZ 1.0E-17
+              EPS_SCHWARZ 2.0E-17
               SCREEN_ON_INITIAL_P FALSE
             &END SCREENING
           &END HF
