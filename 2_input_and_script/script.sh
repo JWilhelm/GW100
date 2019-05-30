@@ -29,11 +29,18 @@ do
   cp $inpdir'/'$GWfile .
   sed -i -e 's/<geo>/'$xyzname'/g' $GWfile
   cp $xyzfile .
-  if grep -q "PROGRAM STOPPED IN" "$outfile"; then
-    echo $dirname' already done'
+
+  if test -f "$calcdir/$dirname/$outfile"; then
+    if grep -q "PROGRAM STOPPED IN" "$outfile"; then
+      echo $dirname' already done'
+    else
+      echo $dirname' running'
+      mpirun -np 24 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+      $GWfile &> $outfile
+    fi
   else
     echo $dirname' running'
-    mpirun -np 4 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+    mpirun -np 24 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
     $GWfile &> $outfile
   fi
 
