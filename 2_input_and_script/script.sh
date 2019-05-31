@@ -6,7 +6,10 @@ inpdir='/data/wilhelm/2_job_test/11_GW100/2_input_and_script'
 calcdir='/data/wilhelm/2_job_test/11_GW100/3_calcs'
 GWfile='GW.inp'
 reffile='GW_reference.dat'
+skipfile='skip.dat'
 outfile='cp2k.out'
+exclhomofile='excluded_HOMOs.dat'
+excllumofile='excluded_LUMOs.dat'
 absresultfile=$inpdir'/'$result_file
 absreffile=$inpdir'/'$reffile
 cd $calcdir
@@ -16,12 +19,20 @@ echo ' #  Name   HOMO      ref HOMO  LUMO      ref LUMO  chiomegatau   fit-point
 
 homodiffsum='0.0'
 lumodiffsum='0.0'
-n_molecules='0'
+n_molecules_homo='0'
+n_molecules_lumo='0'
 
 for xyzfile in $xyzdir*
 do
   xyzname=${xyzfile:$length}
   dirname=${xyzname::-4}
+
+  if grep -q "$dirname" "$inpdir/$skipfile"; then
+    echo $dirname' skipped'
+    echo " "$dirname >> $absresultfile
+    continue
+  fi
+
   if [ ! -d "$calcdir/$dirname" ]; then
     mkdir $dirname
   fi
@@ -35,12 +46,12 @@ do
       echo $dirname' already done'
     else
       echo $dirname' running'
-      mpirun -np 18 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+      mpirun -np 40 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
       $GWfile &> $outfile
     fi
   else
     echo $dirname' running'
-    mpirun -np 18 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+    mpirun -np 40 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
     $GWfile &> $outfile
   fi
 
@@ -57,15 +68,24 @@ do
   homo=$(printf '%.*f\n' 2 $homo)
   lumo=$(printf '%.*f\n' 2 $lumo)
 
-  homodiffsum=$(echo "$homodiffsum+($homo-($homo_ref))*($homo > $homo_ref)"| bc -l)
-  homodiffsum=$(echo "$homodiffsum+($homo_ref-($homo))*($homo < $homo_ref)"| bc -l)
+  if grep -q "$dirname" "$inpdir/$exclhomofile"; then
+    echo $dirname' skipped for averaging HOMO'
+  else
+    homodiffsum=$(echo "$homodiffsum+($homo-($homo_ref))*($homo > $homo_ref)"| bc -l)
+    homodiffsum=$(echo "$homodiffsum+($homo_ref-($homo))*($homo < $homo_ref)"| bc -l)
+    n_molecules_homo=$(echo "$n_molecules_homo+1"| bc -l)
+  fi
 
-  lumodiffsum=$(echo "$lumodiffsum+($lumo-($lumo_ref))*($lumo > $lumo_ref)"| bc -l)
-  lumodiffsum=$(echo "$lumodiffsum+($lumo_ref-($lumo))*($lumo < $lumo_ref)"| bc -l)
+  if grep -q "$dirname" "$inpdir/$excllumofile"; then
+    echo $dirname' skipped for averaging LUMO'
+  else
+    lumodiffsum=$(echo "$lumodiffsum+($lumo-($lumo_ref))*($lumo > $lumo_ref)"| bc -l)
+    lumodiffsum=$(echo "$lumodiffsum+($lumo_ref-($lumo))*($lumo < $lumo_ref)"| bc -l)
+    n_molecules_lumo=$(echo "$n_molecules_lumo+1"| bc -l)
+  fi
 
-  n_molecules=$(echo "$n_molecules+1"| bc -l)
-  runavgerror_homo=$(printf '%.*f\n' 3 $(echo "$homodiffsum / $n_molecules"| bc -l))
-  runavgerror_lumo=$(printf '%.*f\n' 3 $(echo "$lumodiffsum / $n_molecules"| bc -l))
+  runavgerror_homo=$(printf '%.*f\n' 3 $(echo "$homodiffsum / $n_molecules_homo"| bc -l))
+  runavgerror_lumo=$(printf '%.*f\n' 3 $(echo "$lumodiffsum / $n_molecules_lumo"| bc -l))
 
   dirname=$dirname"______________________"
   dirname=${dirname:0:10}

@@ -55,8 +55,9 @@
             CORR_MOS_OCC          10
             CORR_MOS_VIRT         10
             ANALYTIC_CONTINUATION PADE
+!            NPARAM_PADE 4
             CROSSING_SEARCH NEWTON
-            OMEGA_MAX_FIT 2.0
+!            OMEGA_MAX_FIT 1.0
           &END RI_G0W0
         &END RI_RPA
         MEMORY  200.
