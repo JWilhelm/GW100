@@ -12,19 +12,19 @@
  DBCSR| Communication thread load                                             87
 
 
-  **** **** ******  **  PROGRAM STARTED AT               2019-05-31 18:05:40.087
+  **** **** ******  **  PROGRAM STARTED AT               2019-06-07 18:57:42.086
  ***** ** ***  *** **   PROGRAM STARTED ON                                tcopt4
  **    ****   ******    PROGRAM STARTED BY                               wilhelm
- ***** **    ** ** **   PROGRAM PROCESS ID                                 88003
+ ***** **    ** ** **   PROGRAM PROCESS ID                                 93764
   **** **  *******  **  PROGRAM STARTED IN /data/wilhelm/2_job_test/11_GW100/3_c
                                            alcs/67_PN
 
  CP2K| version string:                    CP2K version 7.0 (Development Version)
- CP2K| source code revision number:                                  git:026fb12
+ CP2K| source code revision number:                                  git:bc2813a
  CP2K| cp2kflags: libint fftw3 libxc pexsi elpa=201705 parallel mpi3 scalapack q
  CP2K|            uip libderiv_max_am1=5 libint_max_am=6
  CP2K| is freely available from                            https://www.cp2k.org/
- CP2K| Program compiled at                         Sat May 11 13:15:02 CEST 2019
+ CP2K| Program compiled at                         Sun Jun  2 14:38:23 CEST 2019
  CP2K| Program compiled on                                                tcopt4
  CP2K| Program compiled for                            local_valgrind_March_2019
  CP2K| Data directory path              /data/wilhelm/1_git_repository/cp2k/data
@@ -44,7 +44,7 @@
  GLOBAL| FFTs using library dependent lengths                                  F
  GLOBAL| Global print level                                               MEDIUM
  GLOBAL| MPI I/O enabled                                                       T
- GLOBAL| Total number of message passing processes                            40
+ GLOBAL| Total number of message passing processes                            24
  GLOBAL| Number of threads for this process                                    1
  GLOBAL| This output is from process                                           0
  GLOBAL| CPU model name :  Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz
@@ -52,12 +52,12 @@
  MEMORY| system memory details [Kb]
  MEMORY|                        rank 0           min           max       average
  MEMORY| MemTotal            396954008     396954008     396954008     396954008
- MEMORY| MemFree             376569456     376569456     376569456     376569456
- MEMORY| Buffers                342164        342164        342164        342164
- MEMORY| Cached               16160176      16160176      16160176      16160176
- MEMORY| Slab                   611640        611640        611640        611640
- MEMORY| SReclaimable           473668        473668        473668        473668
- MEMORY| MemLikelyFree       393545464     393545464     393545464     393545464
+ MEMORY| MemFree             339545824     339545824     339545824     339545824
+ MEMORY| Buffers                339172        339172        339172        339172
+ MEMORY| Cached               41398884      41398884      41398884      41398884
+ MEMORY| Slab                  1443460       1443460       1443460       1443460
+ MEMORY| SReclaimable          1302240       1302240       1302240       1302240
+ MEMORY| MemLikelyFree       382586120     382586120     382586120     382586120
 
 
  *** Fundamental physical constants (SI units) ***
@@ -1516,8 +1516,8 @@
                         No outer SCF
 
  PW_GRID| Information for grid number                                          1
- PW_GRID| Grid distributed over                                    40 processors
- PW_GRID| Real space group dimensions                                    40    1
+ PW_GRID| Grid distributed over                                    24 processors
+ PW_GRID| Real space group dimensions                                    24    1
  PW_GRID| the grid is blocked:                                                NO
  PW_GRID| Cutoff [a.u.]                                                    400.0
  PW_GRID| spherical cutoff:                                                   NO
@@ -1527,13 +1527,13 @@
  PW_GRID| Volume element (a.u.^3)  0.1157E-02     Volume (a.u.^3)     27641.1785
  PW_GRID| Grid span                                                    FULLSPACE
  PW_GRID|   Distribution                         Average         Max         Min
- PW_GRID|   G-Vectors                           597196.8      597312      597024
- PW_GRID|   G-Rays                                2073.6        2074        2073
- PW_GRID|   Real Space Points                   597196.8      663552      580608
+ PW_GRID|   G-Vectors                           995328.0      995328      995328
+ PW_GRID|   G-Rays                                3456.0        3456        3456
+ PW_GRID|   Real Space Points                   995328.0      995328      995328
 
  PW_GRID| Information for grid number                                          2
- PW_GRID| Grid distributed over                                    40 processors
- PW_GRID| Real space group dimensions                                    40    1
+ PW_GRID| Grid distributed over                                    24 processors
+ PW_GRID| Real space group dimensions                                    24    1
  PW_GRID| the grid is blocked:                                                NO
  PW_GRID| Cutoff [a.u.]                                                    200.0
  PW_GRID| spherical cutoff:                                                   NO
@@ -1543,13 +1543,13 @@
  PW_GRID| Volume element (a.u.^3)  0.3455E-02     Volume (a.u.^3)     27641.1785
  PW_GRID| Grid span                                                    FULLSPACE
  PW_GRID|   Distribution                         Average         Max         Min
- PW_GRID|   G-Vectors                           200000.0      200600      199600
- PW_GRID|   G-Rays                                1000.0        1003         998
- PW_GRID|   Real Space Points                   200000.0      200000      200000
+ PW_GRID|   G-Vectors                           333333.3      333600      333200
+ PW_GRID|   G-Rays                                1666.7        1668        1666
+ PW_GRID|   Real Space Points                   333333.3      360000      320000
 
  PW_GRID| Information for grid number                                          3
- PW_GRID| Grid distributed over                                    40 processors
- PW_GRID| Real space group dimensions                                    40    1
+ PW_GRID| Grid distributed over                                    24 processors
+ PW_GRID| Real space group dimensions                                    24    1
  PW_GRID| the grid is blocked:                                                NO
  PW_GRID| Cutoff [a.u.]                                                     66.7
  PW_GRID| spherical cutoff:                                                   NO
@@ -1559,13 +1559,13 @@
  PW_GRID| Volume element (a.u.^3)  0.1600E-01     Volume (a.u.^3)     27641.1785
  PW_GRID| Grid span                                                    FULLSPACE
  PW_GRID|   Distribution                         Average         Max         Min
- PW_GRID|   G-Vectors                            43200.0       43560       42960
- PW_GRID|   G-Rays                                 360.0         363         358
- PW_GRID|   Real Space Points                    43200.0       43200       43200
+ PW_GRID|   G-Vectors                            72000.0       72360       71760
+ PW_GRID|   G-Rays                                 600.0         603         598
+ PW_GRID|   Real Space Points                    72000.0       72000       72000
 
  PW_GRID| Information for grid number                                          4
- PW_GRID| Grid distributed over                                    40 processors
- PW_GRID| Real space group dimensions                                    40    1
+ PW_GRID| Grid distributed over                                    24 processors
+ PW_GRID| Real space group dimensions                                    24    1
  PW_GRID| the grid is blocked:                                                NO
  PW_GRID| Cutoff [a.u.]                                                     22.2
  PW_GRID| spherical cutoff:                                                   NO
@@ -1575,13 +1575,13 @@
  PW_GRID| Volume element (a.u.^3)  0.7406E-01     Volume (a.u.^3)     27641.1785
  PW_GRID| Grid span                                                    FULLSPACE
  PW_GRID|   Distribution                         Average         Max         Min
- PW_GRID|   G-Vectors                             9331.2        9432        9288
- PW_GRID|   G-Rays                                 129.6         131         129
- PW_GRID|   Real Space Points                     9331.2       10368        5184
+ PW_GRID|   G-Vectors                            15552.0       15768       15408
+ PW_GRID|   G-Rays                                 216.0         219         214
+ PW_GRID|   Real Space Points                    15552.0       15552       15552
 
  PW_GRID| Information for grid number                                          5
- PW_GRID| Grid distributed over                                    40 processors
- PW_GRID| Real space group dimensions                                    40    1
+ PW_GRID| Grid distributed over                                    24 processors
+ PW_GRID| Real space group dimensions                                    24    1
  PW_GRID| the grid is blocked:                                                NO
  PW_GRID| Cutoff [a.u.]                                                      7.4
  PW_GRID| spherical cutoff:                                                   NO
@@ -1591,9 +1591,9 @@
  PW_GRID| Volume element (a.u.^3)  0.4319         Volume (a.u.^3)     27641.1785
  PW_GRID| Grid span                                                    FULLSPACE
  PW_GRID|   Distribution                         Average         Max         Min
- PW_GRID|   G-Vectors                             1600.0        1720        1520
- PW_GRID|   G-Rays                                  40.0          43          38
- PW_GRID|   Real Space Points                     1600.0        1600        1600
+ PW_GRID|   G-Vectors                             2666.7        2720        2640
+ PW_GRID|   G-Rays                                  66.7          68          66
+ PW_GRID|   Real Space Points                     2666.7        3200        1600
 
  POISSON| Solver                                          Martyna-Tuckerman (MT)
  POISSON| MT| Alpha                                                        7.000
@@ -1604,31 +1604,31 @@
  RS_GRID|   Bounds   1           -100      99                Points:         200
  RS_GRID|   Bounds   2           -100      99                Points:         200
  RS_GRID|   Bounds   3           -100      99                Points:         200
- RS_GRID| Real space distribution over                                  5 groups
+ RS_GRID| Real space distribution over                                  4 groups
  RS_GRID| Real space distribution along direction                              2
  RS_GRID| Border size                                                         25
- RS_GRID| Real space distribution over                                  8 groups
+ RS_GRID| Real space distribution over                                  6 groups
  RS_GRID| Real space distribution along direction                              3
  RS_GRID| Border size                                                         25
  RS_GRID|   Distribution                         Average         Max         Min
- RS_GRID|   Planes                                  90.0          90          90
+ RS_GRID|   Planes                                 100.0         100         100
  RS_GRID|   Distribution                         Average         Max         Min
- RS_GRID|   Planes                                  75.0          75          75
+ RS_GRID|   Planes                                  83.3          84          83
 
  RS_GRID| Information for grid number                                          3
  RS_GRID|   Bounds   1            -60      59                Points:         120
  RS_GRID|   Bounds   2            -60      59                Points:         120
  RS_GRID|   Bounds   3            -60      59                Points:         120
- RS_GRID| Real space distribution over                                  5 groups
+ RS_GRID| Real space distribution over                                  4 groups
  RS_GRID| Real space distribution along direction                              2
  RS_GRID| Border size                                                         27
- RS_GRID| Real space distribution over                                  8 groups
+ RS_GRID| Real space distribution over                                  6 groups
  RS_GRID| Real space distribution along direction                              3
  RS_GRID| Border size                                                         27
  RS_GRID|   Distribution                         Average         Max         Min
- RS_GRID|   Planes                                  78.0          78          78
+ RS_GRID|   Planes                                  84.0          84          84
  RS_GRID|   Distribution                         Average         Max         Min
- RS_GRID|   Planes                                  69.0          69          69
+ RS_GRID|   Planes                                  74.0          74          74
 
  RS_GRID| Information for grid number                                          4
  RS_GRID|   Bounds   1            -36      35                Points:          72
@@ -1668,235 +1668,277 @@
 
  Extrapolation method: initial_guess
 
- *** WARNING in qs_initial_guess.F:267 :: User requested to restart the   ***
- *** wavefunction from the file named: ALL_ELEC-RESTART.wfn. This file    ***
- *** does not exist. Please check the existence of the file or change     ***
- *** properly the value of the keyword WFN_RESTART_FILE_NAME. Calculation ***
- *** continues using ATOMIC GUESS.                                        ***
-
-
- Atomic guess: The first density matrix is obtained in terms of atomic orbitals
-               and electronic configurations assigned to each atomic kind
-
- Guess for atomic kind: P
-
- Electronic structure
-    Total number of core electrons                                          0.00
-    Total number of valence electrons                                      15.00
-    Total number of electrons                                              15.00
-    Multiplicity                                                   not specified
-    S      2.00  2.00  2.00
-    P      6.00  3.00
-
-
- *******************************************************************************
-                  Iteration          Convergence                     Energy [au]
- *******************************************************************************
-                          1         1.16002                    -339.902053802966
-                          2        0.608602                    -339.927721456507
-                          3        0.247508E-01                -339.940632571195
-                          4        0.120476E-01                -339.940889476124
-                          5        0.573674E-04                -339.940971695138
-                          6        0.619336E-05                -339.940971697136
-                          7        0.969692E-07                -339.940971697157
-
- Energy components [Hartree]           Total Energy ::         -339.940971697157
-                                        Band Energy ::         -193.863695190743
-                                     Kinetic Energy ::          339.128212036082
-                                   Potential Energy ::         -679.069183733239
-                                      Virial (-V/T) ::            2.002396614709
-                                        Core Energy ::         -471.235864200371
-                                          XC Energy ::          -21.786067268699
-                                     Coulomb Energy ::          153.080959771914
-
- Orbital energies  State     L     Occupation   Energy[a.u.]          Energy[eV]
-
-                       1     0          2.000     -76.058514        -2069.657421
-                       2     0          2.000      -6.328044         -172.194842
-                       3     0          2.000      -0.511322          -13.913768
-
-                       1     1          6.000      -4.575417         -124.503440
-                       2     1          3.000      -0.205144           -5.582242
-
-
- Total Electron Density at R=0:                                      2155.019097
-
- Guess for atomic kind: N
-
- Electronic structure
-    Total number of core electrons                                          0.00
-    Total number of valence electrons                                       7.00
-    Total number of electrons                                               7.00
-    Multiplicity                                                   not specified
-    S      2.00  2.00
-    P      3.00
-
-
- *******************************************************************************
-                  Iteration          Convergence                     Energy [au]
- *******************************************************************************
-                          1        0.279524                     -53.981632046005
-                          2        0.268685                     -53.983924920307
-                          3        0.152417E-01                 -54.022628548562
-                          4        0.551041E-03                 -54.022745486059
-                          5        0.500952E-04                 -54.022745600998
-                          6        0.486334E-06                 -54.022745602456
-
- Energy components [Hartree]           Total Energy ::          -54.022745602456
-                                        Band Energy ::          -30.167521683328
-                                     Kinetic Energy ::           53.720572583189
-                                   Potential Energy ::         -107.743318185645
-                                      Virial (-V/T) ::            2.005624903175
-                                        Core Energy ::          -73.687675574144
-                                          XC Energy ::           -6.139305459341
-                                     Coulomb Energy ::           25.804235431029
-
- Orbital energies  State     L     Occupation   Energy[a.u.]          Energy[eV]
-
-                       1     0          2.000     -14.012127         -381.289380
-                       2     0          2.000      -0.674585          -18.356386
-
-                       1     1          3.000      -0.264699           -7.202827
-
-
- Total Electron Density at R=0:                                       201.353138
- Re-scaling the density matrix to get the right number of electrons
-                  # Electrons              Trace(P)               Scaling factor
-                           22                22.000                        1.000
-
 
  SCF WAVEFUNCTION OPTIMIZATION
 
   Step     Update method      Time    Convergence         Total energy    Change
   ------------------------------------------------------------------------------
-     1 P_Mix/Diag. 0.40E+00    2.1     0.18341176      -396.0308522597 -3.96E+02
-     2 P_Mix/Diag. 0.40E+00    2.9     0.24119637      -395.9460996991  8.48E-02
-     3 P_Mix/Diag. 0.40E+00    2.2     0.19020417      -395.8681111479  7.80E-02
-     4 P_Mix/Diag. 0.40E+00    2.1     0.21416489      -395.8250729945  4.30E-02
-     5 P_Mix/Diag. 0.40E+00    2.0     0.20744207      -395.7715487017  5.35E-02
-     6 P_Mix/Diag. 0.40E+00    2.1     0.20098792      -395.7588896269  1.27E-02
-     7 P_Mix/Diag. 0.40E+00    2.2     0.20470888      -395.7259629187  3.29E-02
-     8 P_Mix/Diag. 0.40E+00    2.3     0.20089675      -395.7305209118 -4.56E-03
-     9 P_Mix/Diag. 0.40E+00    2.4     0.20041697      -395.7087011159  2.18E-02
-    10 P_Mix/Diag. 0.40E+00    2.3     0.20044924      -395.7203270330 -1.16E-02
-    11 P_Mix/Diag. 0.40E+00    2.3     0.20037519      -395.7028157725  1.75E-02
-    12 P_Mix/Diag. 0.40E+00    2.3     0.20032994      -395.7168974150 -1.41E-02
-    13 P_Mix/Diag. 0.40E+00    2.2     0.20033877      -395.7008364677  1.61E-02
-    14 P_Mix/Diag. 0.40E+00    2.2     0.20032090      -395.7157320798 -1.49E-02
-    15 P_Mix/Diag. 0.40E+00    2.4     0.20032919      -395.7001479806  1.56E-02
-    16 P_Mix/Diag. 0.40E+00    2.3     0.20032567      -395.7153203563 -1.52E-02
-    17 P_Mix/Diag. 0.40E+00    2.2     0.20032811      -395.6998996429  1.54E-02
-    18 P_Mix/Diag. 0.40E+00    2.3     0.20032802      -395.7151705088 -1.53E-02
-    19 P_Mix/Diag. 0.40E+00    2.2     0.20032836      -395.6998085600  1.54E-02
-    20 P_Mix/Diag. 0.40E+00    2.3     0.20032862      -395.7151154715 -1.53E-02
-    21 P_Mix/Diag. 0.40E+00    2.3     0.20032855      -395.6997751543  1.53E-02
-    22 P_Mix/Diag. 0.40E+00    2.2     0.20032870      -395.7150953272 -1.53E-02
-    23 P_Mix/Diag. 0.40E+00    2.1     0.20032863      -395.6997629750  1.53E-02
-    24 P_Mix/Diag. 0.40E+00    2.2     0.20032870      -395.7150879981 -1.53E-02
-    25 P_Mix/Diag. 0.40E+00    2.3     0.20032867      -395.6997585551  1.53E-02
-    26 P_Mix/Diag. 0.40E+00    2.2     0.20032870      -395.7150853405 -1.53E-02
-    27 P_Mix/Diag. 0.40E+00    2.2     0.20032868      -395.6997569533  1.53E-02
-    28 P_Mix/Diag. 0.40E+00    2.5     0.20032870      -395.7150843771 -1.53E-02
-    29 P_Mix/Diag. 0.40E+00    2.4     0.20032869      -395.6997563721  1.53E-02
-    30 P_Mix/Diag. 0.40E+00    2.3     0.20032870      -395.7150840274 -1.53E-02
-    31 P_Mix/Diag. 0.40E+00    2.4     0.20032869      -395.6997561609  1.53E-02
-    32 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.7150839002 -1.53E-02
-    33 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.6997560841  1.53E-02
-    34 P_Mix/Diag. 0.40E+00    2.4     0.20032869      -395.7150838539 -1.53E-02
-    35 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.6997560561  1.53E-02
-    36 P_Mix/Diag. 0.40E+00    2.3     0.20032869      -395.7150838370 -1.53E-02
-    37 P_Mix/Diag. 0.40E+00    2.3     0.20032869      -395.6997560459  1.53E-02
-    38 P_Mix/Diag. 0.40E+00    2.4     0.20032869      -395.7150838309 -1.53E-02
-    39 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560421  1.53E-02
-    40 P_Mix/Diag. 0.40E+00    2.4     0.20032869      -395.7150838286 -1.53E-02
-    41 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.6997560408  1.53E-02
-    42 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.7150838278 -1.53E-02
-    43 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.6997560403  1.53E-02
-    44 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.7150838275 -1.53E-02
-    45 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560401  1.53E-02
-    46 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.7150838274 -1.53E-02
-    47 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.6997560400  1.53E-02
-    48 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.7150838273 -1.53E-02
-    49 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.6997560400  1.53E-02
-    50 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.7150838273 -1.53E-02
-    51 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.6997560400  1.53E-02
-    52 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.7150838273 -1.53E-02
-    53 P_Mix/Diag. 0.40E+00    2.4     0.20032869      -395.6997560400  1.53E-02
-    54 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.7150838273 -1.53E-02
-    55 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.6997560400  1.53E-02
-    56 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.7150838273 -1.53E-02
-    57 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.6997560400  1.53E-02
-    58 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.7150838273 -1.53E-02
-    59 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-    60 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.7150838273 -1.53E-02
-    61 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.6997560400  1.53E-02
-    62 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.7150838273 -1.53E-02
-    63 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.6997560400  1.53E-02
-    64 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.7150838273 -1.53E-02
-    65 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.6997560400  1.53E-02
-    66 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.7150838273 -1.53E-02
-    67 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.6997560400  1.53E-02
-    68 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.7150838273 -1.53E-02
-    69 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.6997560400  1.53E-02
-    70 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.7150838273 -1.53E-02
-    71 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-    72 P_Mix/Diag. 0.40E+00    2.4     0.20032869      -395.7150838273 -1.53E-02
-    73 P_Mix/Diag. 0.40E+00    2.4     0.20032869      -395.6997560400  1.53E-02
-    74 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.7150838273 -1.53E-02
-    75 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-    76 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.7150838273 -1.53E-02
-    77 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-    78 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.7150838273 -1.53E-02
-    79 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-    80 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.7150838273 -1.53E-02
-    81 P_Mix/Diag. 0.40E+00    2.5     0.20032869      -395.6997560400  1.53E-02
-    82 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.7150838273 -1.53E-02
-    83 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-    84 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.7150838273 -1.53E-02
-    85 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.6997560400  1.53E-02
-    86 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.7150838273 -1.53E-02
-    87 P_Mix/Diag. 0.40E+00    3.0     0.20032869      -395.6997560400  1.53E-02
-    88 P_Mix/Diag. 0.40E+00    3.0     0.20032869      -395.7150838273 -1.53E-02
-    89 P_Mix/Diag. 0.40E+00    3.0     0.20032869      -395.6997560400  1.53E-02
-    90 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.7150838273 -1.53E-02
-    91 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.6997560400  1.53E-02
-    92 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.7150838273 -1.53E-02
-    93 P_Mix/Diag. 0.40E+00    3.0     0.20032869      -395.6997560400  1.53E-02
-    94 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.7150838273 -1.53E-02
-    95 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.6997560400  1.53E-02
-    96 P_Mix/Diag. 0.40E+00    3.0     0.20032869      -395.7150838273 -1.53E-02
-    97 P_Mix/Diag. 0.40E+00    3.0     0.20032869      -395.6997560400  1.53E-02
-    98 P_Mix/Diag. 0.40E+00    3.0     0.20032869      -395.7150838273 -1.53E-02
-    99 P_Mix/Diag. 0.40E+00    3.0     0.20032869      -395.6997560400  1.53E-02
-   100 P_Mix/Diag. 0.40E+00    3.0     0.20032869      -395.7150838273 -1.53E-02
-   101 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.6997560400  1.53E-02
-   102 P_Mix/Diag. 0.40E+00    3.0     0.20032869      -395.7150838273 -1.53E-02
-   103 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.6997560400  1.53E-02
-   104 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.7150838273 -1.53E-02
-   105 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.6997560400  1.53E-02
-   106 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.7150838273 -1.53E-02
-   107 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.6997560400  1.53E-02
-   108 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.7150838273 -1.53E-02
-   109 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.6997560400  1.53E-02
-   110 P_Mix/Diag. 0.40E+00    2.9     0.20032869      -395.7150838273 -1.53E-02
-   111 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.6997560400  1.53E-02
-   112 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.7150838273 -1.53E-02
-   113 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.6997560400  1.53E-02
-   114 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.7150838273 -1.53E-02
-   115 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-   116 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.7150838273 -1.53E-02
-   117 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.6997560400  1.53E-02
-   118 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.7150838273 -1.53E-02
-   119 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.6997560400  1.53E-02
-   120 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.7150838273 -1.53E-02
-   121 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-   122 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.7150838273 -1.53E-02
-   123 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-   124 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.7150838273 -1.53E-02
-   125 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.6997560400  1.53E-02
-   126 P_Mix/Diag. 0.40E+00    2.8     0.20032869      -395.7150838273 -1.53E-02
-   127 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-   128 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.7150838273 -1.53E-02
-   129 P_Mix/Diag. 0.40E+00    2.6     0.20032869      -395.6997560400  1.53E-02
-   130 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.7150838273 -1.53E-02
-   131 P_Mix/Diag. 0.40E+00    2.7     0.20032869      -395.6997560400  1.53E-02
+     1 P_Mix/Diag. 0.40E+00    4.2     0.94497097      -395.0432179844 -3.95E+02
+     2 P_Mix/Diag. 0.40E+00    3.4     0.33075040      -395.4088185444 -3.66E-01
+     3 P_Mix/Diag. 0.40E+00    3.3     0.40041858      -395.5641459814 -1.55E-01
+     4 P_Mix/Diag. 0.40E+00    3.3     0.23700766      -395.6565776514 -9.24E-02
+     5 P_Mix/Diag. 0.40E+00    3.3     0.19318962      -395.6859615465 -2.94E-02
+     6 P_Mix/Diag. 0.40E+00    3.3     0.21022947      -395.7135376691 -2.76E-02
+     7 P_Mix/Diag. 0.40E+00    3.2     0.19882257      -395.7032006665  1.03E-02
+     8 P_Mix/Diag. 0.40E+00    3.3     0.20081050      -395.7178579700 -1.47E-02
+     9 P_Mix/Diag. 0.40E+00    3.2     0.20058377      -395.7014696065  1.64E-02
+    10 P_Mix/Diag. 0.40E+00    3.3     0.20055913      -395.7159458512 -1.45E-02
+    11 P_Mix/Diag. 0.40E+00    3.4     0.20066075      -395.7000504749  1.59E-02
+    12 P_Mix/Diag. 0.40E+00    3.3     0.20032172      -395.7151700723 -1.51E-02
+    13 P_Mix/Diag. 0.40E+00    3.2     0.20049973      -395.6997362432  1.54E-02
+    14 P_Mix/Diag. 0.40E+00    3.2     0.20027799      -395.7150518578 -1.53E-02
+    15 P_Mix/Diag. 0.40E+00    3.3     0.20040107      -395.6997262281  1.53E-02
+    16 P_Mix/Diag. 0.40E+00    3.3     0.20029616      -395.7150641329 -1.53E-02
+    17 P_Mix/Diag. 0.40E+00    3.2     0.20035828      -395.6997446770  1.53E-02
+    18 P_Mix/Diag. 0.40E+00    3.3     0.20031345      -395.7150774081 -1.53E-02
+    19 P_Mix/Diag. 0.40E+00    3.2     0.20034099      -395.6997529261  1.53E-02
+    20 P_Mix/Diag. 0.40E+00    3.2     0.20032223      -395.7150821550 -1.53E-02
+    21 P_Mix/Diag. 0.40E+00    3.2     0.20033388      -395.6997552716  1.53E-02
+    22 P_Mix/Diag. 0.40E+00    3.2     0.20032600      -395.7150834018 -1.53E-02
+    23 P_Mix/Diag. 0.40E+00    3.2     0.20033088      -395.6997558344  1.53E-02
+    24 P_Mix/Diag. 0.40E+00    3.3     0.20032757      -395.7150837040 -1.53E-02
+    25 P_Mix/Diag. 0.40E+00    3.2     0.20032961      -395.6997559759  1.53E-02
+    26 P_Mix/Diag. 0.40E+00    3.3     0.20032822      -395.7150837869 -1.53E-02
+    27 P_Mix/Diag. 0.40E+00    3.4     0.20032907      -395.6997560190  1.53E-02
+    28 P_Mix/Diag. 0.40E+00    3.2     0.20032850      -395.7150838141 -1.53E-02
+    29 P_Mix/Diag. 0.40E+00    3.3     0.20032885      -395.6997560337  1.53E-02
+    30 P_Mix/Diag. 0.40E+00    3.2     0.20032861      -395.7150838235 -1.53E-02
+    31 P_Mix/Diag. 0.40E+00    3.2     0.20032876      -395.6997560385  1.53E-02
+    32 P_Mix/Diag. 0.40E+00    3.3     0.20032866      -395.7150838264 -1.53E-02
+    33 P_Mix/Diag. 0.40E+00    3.2     0.20032872      -395.6997560398  1.53E-02
+    34 P_Mix/Diag. 0.40E+00    3.3     0.20032868      -395.7150838272 -1.53E-02
+    35 P_Mix/Diag. 0.40E+00    3.3     0.20032870      -395.6997560401  1.53E-02
+    36 P_Mix/Diag. 0.40E+00    3.1     0.20032869      -395.7150838274 -1.53E-02
+    37 P_Mix/Diag. 0.40E+00    3.3     0.20032870      -395.6997560401  1.53E-02
+    38 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838274 -1.53E-02
+    39 P_Mix/Diag. 0.40E+00    3.3     0.20032870      -395.6997560400  1.53E-02
+    40 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+    41 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+    42 P_Mix/Diag. 0.40E+00    3.5     0.20032869      -395.7150838273 -1.53E-02
+    43 P_Mix/Diag. 0.40E+00    3.5     0.20032869      -395.6997560400  1.53E-02
+    44 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+    45 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+    46 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    47 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    48 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+    49 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+    50 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+    51 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+    52 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    53 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+    54 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+    55 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+    56 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+    57 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    58 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+    59 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+    60 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    61 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    62 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    63 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    64 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    65 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    66 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    67 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    68 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    69 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    70 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+    71 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+    72 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    73 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    74 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+    75 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+    76 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    77 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    78 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    79 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    80 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    81 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    82 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    83 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    84 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    85 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+    86 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    87 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+    88 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    89 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    90 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    91 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    92 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    93 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+    94 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+    95 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+    96 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+    97 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+    98 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+    99 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   100 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   101 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   102 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   103 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   104 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   105 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   106 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   107 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   108 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   109 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+   110 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   111 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   112 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   113 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   114 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   115 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   116 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+   117 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+   118 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   119 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   120 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   121 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   122 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   123 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   124 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   125 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+   126 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   127 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+   128 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   129 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   130 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   131 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   132 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   133 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   134 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   135 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+   136 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   137 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   138 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+   139 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   140 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   141 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   142 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+   143 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+   144 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+   145 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   146 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+   147 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+   148 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   149 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+   150 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   151 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+   152 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   153 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   154 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   155 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+   156 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   157 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+   158 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   159 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   160 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   161 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   162 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   163 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   164 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   165 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   166 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   167 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   168 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   169 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   170 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+   171 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   172 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   173 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+   174 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   175 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   176 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   177 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   178 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   179 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   180 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   181 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   182 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   183 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   184 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   185 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.6997560400  1.53E-02
+   186 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   187 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   188 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   189 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.6997560400  1.53E-02
+   190 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   191 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   192 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+   193 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   194 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+   195 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   196 P_Mix/Diag. 0.40E+00    3.4     0.20032869      -395.7150838273 -1.53E-02
+   197 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   198 P_Mix/Diag. 0.40E+00    3.2     0.20032869      -395.7150838273 -1.53E-02
+   199 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.6997560400  1.53E-02
+   200 P_Mix/Diag. 0.40E+00    3.3     0.20032869      -395.7150838273 -1.53E-02
+
+  Leaving inner SCF loop after reaching   200 steps.
+
+
+  Electronic density on regular grids:        -12.7676905060        9.2323094940
+  Core density on regular grids:               22.0000000000        0.0000000000
+  Hard and soft densities (Lebedev):          -29.6577953105      -20.4254858247
+  Total Rho_soft + Rho1_hard - Rho1_soft      -21.9999999918
+  Total charge density (r-space):               0.0000000082
+  Total Rho_soft + Rho0_soft (g-space):        -0.0000001402
+
+  Overlap energy of the core charge distribution:               0.00000202124853
+  Self energy of the core charge distribution:               -195.40731662486505
+  Core Hamiltonian energy:                                   -200.53572461453521
+  Hartree energy:                                              31.90256517790160
+  Exchange-correlation energy:                                 -6.52640262523743
+
+  GAPW| Exc from hard and soft atomic rho1:                   -23.41966429490794
+  GAPW| local Eh = 1 center integrals:                         -1.72854286691596
+
+  Total energy:                                              -395.71508382731150
+
+ *** WARNING in qs_scf.F:542 :: SCF run NOT converged ***
+
+
+ !-----------------------------------------------------------------------------!
+                     Mulliken Population Analysis
+
+ #  Atom  Element  Kind  Atomic population                           Net charge
+       1     P        1         16.526426                             -1.526426
+       2     N        2          5.473574                              1.526426
+ # Total charge                             22.000000                 -0.000000
+
+ !-----------------------------------------------------------------------------!
+
+ !-----------------------------------------------------------------------------!
+                           Hirshfeld Charges
+
+  #Atom  Element  Kind  Ref Charge     Population                    Net charge
+      1       P      1      15.000         16.504                        -1.504
+      2       N      2       7.000          5.473                         1.527
+
+  Total Charge                                                            0.023
+ !-----------------------------------------------------------------------------!
+
+ *******************************************************************************
+ *   ___                                                                       *
+ *  /   \                                                                      *
+ * [ABORT]                                                                     *
+ *  \___/               SCF not converged: not possible to run MP2             *
+ *    |                                                                        *
+ *  O/|                                                                        *
+ * /| |                                                                        *
+ * / \                                                               mp2.F:199 *
+ *******************************************************************************
+
+
+ ===== Routine Calling Stack ===== 
+
+            2 qs_energies
+            1 CP2K
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------

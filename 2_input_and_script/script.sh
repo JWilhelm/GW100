@@ -46,12 +46,12 @@ do
       echo $dirname' already done'
     else
       echo $dirname' running'
-      mpirun -np 40 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+      mpirun -np 24 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
       $GWfile &> $outfile
     fi
   else
     echo $dirname' running'
-    mpirun -np 40 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+    mpirun -np 24 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
     $GWfile &> $outfile
   fi
 
