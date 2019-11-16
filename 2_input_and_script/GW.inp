@@ -36,7 +36,6 @@
         &IM_TIME
           EPS_FILTER_IM_TIME 1.0E-30
           DO_DBCSR_T .FALSE.
-          GW
           GROUP_SIZE_3c 1
           GROUP_SIZE_P 1
           POINTS_PER_MAGNITUDE 1000
@@ -51,14 +50,16 @@
           &END HF
           RPA_NUM_QUAD_POINTS 14
           MINIMAX
+          GW
           &RI_G0W0
-            CORR_MOS_OCC          10
-            CORR_MOS_VIRT         10
-            ANALYTIC_CONTINUATION PADE
-            NPARAM_PADE 8
-            CROSSING_SEARCH NEWTON
-            OMEGA_MAX_FIT 1.0
-            CC_GRID_SIGMA
+            CORR_MOS_OCC            1
+            CORR_MOS_VIRT           1
+            ANALYTIC_CONTINUATION   PADE
+            NPARAM_PADE             16
+            CROSSING_SEARCH         NEWTON
+            OMEGA_MAX_FIT           1.0
+            NUM_FREQ_POINTS_G_AND_W 100
+            NUM_FREQ_POINTS_SIGMA    16
           &END RI_G0W0
         &END RI_RPA
         MEMORY  200.

@@ -1,9 +1,9 @@
 #!/bin/bash
 
 result_file='results.out'
-xyzdir='/data/wilhelm/2_job_test/11_GW100/1_struc/'
-inpdir='/data/wilhelm/2_job_test/11_GW100/2_input_and_script'
-calcdir='/data/wilhelm/2_job_test/11_GW100/3_calcs'
+xyzdir='/data/wilhelm/05_GW100/GW100/1_struc/'
+inpdir='/data/wilhelm/05_GW100/GW100/2_input_and_script'
+calcdir='/data/wilhelm/05_GW100/GW100/3_calcs'
 GWfile='GW.inp'
 reffile='GW_reference.dat'
 skipfile='skip.dat'
@@ -46,12 +46,12 @@ do
       echo $dirname' already done'
     else
       echo $dirname' running'
-      mpirun -np 24 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+      mpirun -np 24 /data/wilhelm/03_GW_freq_CC_time_minimax/cp2k/exe/local_valgrind/cp2k.pdbg \
       $GWfile &> $outfile
     fi
   else
     echo $dirname' running'
-    mpirun -np 24 /data/wilhelm/1_git_repository/cp2k/exe/local_valgrind_March_2019/cp2k.pdbg \
+    mpirun -np 24 /data/wilhelm/03_GW_freq_CC_time_minimax/cp2k/exe/local_valgrind/cp2k.pdbg \
     $GWfile &> $outfile
   fi
 
