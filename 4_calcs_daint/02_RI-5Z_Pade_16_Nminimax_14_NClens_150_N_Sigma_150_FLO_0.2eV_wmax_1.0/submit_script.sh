@@ -2,7 +2,7 @@
 
 result_file='results.out'
 xyzdir='/scratch/snx3000/jwilhelm/23_GW100_git/1_struc/'
-calcdir='/scratch/snx3000/jwilhelm/23_GW100_git/4_calcs_daint/02_RI-5Z_Pade_16_Nminimax_14_NClens_150_N_Sigma_150_FLO_0.2eV_wmax_1.0'
+calcdir=$(pwd)
 GWfile='GW.inp'
 submitfile='run.sh'
 cp2koutfile='cp2k.out'
