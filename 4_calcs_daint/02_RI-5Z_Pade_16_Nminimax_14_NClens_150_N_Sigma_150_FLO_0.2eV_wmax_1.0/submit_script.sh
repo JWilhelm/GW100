@@ -2,6 +2,7 @@
 
 result_file='results.out'
 xyzdir='/scratch/snx3000/jwilhelm/23_GW100_git/1_struc/'
+wfndir='/scratch/snx3000/jwilhelm/23_GW100_git/5_WFN'
 calcdir=$(pwd)
 GWfile='GW.inp'
 submitfile='run.sh'
@@ -32,6 +33,11 @@ do
 
     sed -i -e 's/<nodes>/1/g' $submitfile
 
+  fi
+
+  if [ $dirname == '56_TiF4' ] || [ $dirname == '65_BN' ] || [ $dirname == '67_PN' ] || [ $dirname == '84_BeO' ] || [ $dirname == '85_MgO' ]  ; then
+      cp $wfndir'/'$dirname'/ALL_ELEC-RESTART.wfn' .
+      echo 'Copied WFN for   '$xyzname'.'
   fi
 
   if grep -Fq "( vir )" $cp2koutfile
