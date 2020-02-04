@@ -43,6 +43,13 @@ do
 
   fi
 
+  if [ $dirname == '65_BN' ] ; then
+    sed -i -e 's/NUM_FREQ_POINTS_CLENSHAW_LOW_SCALING_GW     100/NUM_FREQ_POINTS_CLENSHAW_LOW_SCALING_GW     400/g' $GWfile
+    sed -i -e 's/<time>/23/g' $submitfile
+  else
+    sed -i -e 's/<time>/07/g' $submitfile
+  fi
+
   if [ $dirname == '56_TiF4' ] || [ $dirname == '65_BN' ] || [ $dirname == '67_PN' ] || [ $dirname == '81_CO' ] || [ $dirname == '84_BeO' ] || [ $dirname == '85_MgO' ] || [ $dirname == '100_CuCN' ] ; then
       cp $wfndir'/'$dirname'/ALL_ELEC-RESTART.wfn' .
       echo 'Copied WFN for   '$xyzname'.'
